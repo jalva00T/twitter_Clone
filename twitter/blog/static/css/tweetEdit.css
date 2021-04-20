@@ -1,0 +1,167 @@
+/*********************
+
+COMMON
+
+*********************/
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: #000000;
+}
+
+.container {
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 600px;
+}
+
+/*********************
+
+CANCEL & UPDATE BUTTONS
+
+*********************/
+
+.btn {
+    background-color: #00ABAE;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-gray {
+    color: white;
+    background-color: #808080;
+}
+
+.btn:hover {
+    color: white;
+}
+
+a.btn-gray:visited {
+    color: white;
+}
+
+/*********************
+
+MAIN
+
+*********************/
+
+.main {
+    text-align: left;
+}
+
+.main .main-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main .main-header .logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.main .main-header h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #808080
+}
+
+.main .main-header {
+    padding: 10px;
+    border-bottom: 1px solid #00ABAE;
+}
+
+
+/*********************
+
+HOME
+
+*********************/
+
+.home .tweet-post {
+    display: flex;
+    padding: 10px;
+}
+
+.home .tweet-post .my-icon {
+    width: 80px;
+    padding: 5px 15px 10px 10px;
+}
+
+.home .tweet-post .my-icon img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .tweet-post .input-area {
+    width: calc(100% - 80px);
+    flex-grow: 1;
+}
+
+.home .tweet-post .input-area input[type=text] {
+    border: 0px;
+    width: 100%;
+    background: #e6fef7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.home .tweet-post .input-area input[type=text]:focus {
+    /* Hide the border during focus */
+    outline: none;
+}
+
+.home .tweet-post .input-area textarea {
+    border: 0px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    /* Hide the customizing size area */
+    resize: none;
+}
+
+.home .tweet-post .input-area textarea:focus {
+    /* Hide the border during focus */
+    outline: none;
+    height: 100px;
+}
+
+.home .tweet-post .input-area .bottom-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #00ABAE;
+    padding-top: 8px;
+}
+
+.home .ditch {
+    height: 15px;
+    border-top: 1px solid #00ABAE;
+    border-bottom: 1px solid #00ABAE;
+    background-color: #000000;
+    border-bottom: 1px solid #00ABAE;
+}
+
+@media screen and (max-width:500px) {
+    .home .tweet-list .tweet .user {
+        /* 横幅を固定 */
+        width: 60px;
+        padding: 5px 10px 10px 5px;
+    }
+    .bottom-area .btn {
+        margin-top: 10px;
+    }
+}

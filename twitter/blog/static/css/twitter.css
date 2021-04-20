@@ -22,11 +22,12 @@ body {
     line-height: 20px;
     margin-bottom: 0;
     font-weight: bold;
+    color: #808080;
 }
 
 .main .main-header {
     padding: 10px;
-    border-bottom: 1px solid rgb(235, 238, 240);
+    border-bottom: 1px solid #00ABAE;
 }
 
 /*********************
@@ -84,6 +85,7 @@ POST
     height: 100px;
     /* Hide the customizing size area */
     resize: none;
+    border-radius: 5px;
 }
 
 .home .tweet-post .input-area textarea:focus {
@@ -96,7 +98,7 @@ POST
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid rgb(235, 238, 240);
+    border-top: 1px solid #00ABAE;
     padding-top: 8px;
 }
 
@@ -111,16 +113,22 @@ POST
 
 .home .ditch {
     height: 15px;
-    border-top: 1px solid rgb(235, 238, 240);
+    border-top: 1px solid #00ABAE;
     border-bottom: 1px solid rgb(235, 238, 240);
     background-color: #000000;
-    border-bottom: 1px solid rgb(235, 238, 240);
+    border-bottom: 1px solid #00ABAE;
 }
+
+/*********************
+
+TWEET LIST
+
+*********************/
 
 .home .tweet-list .tweet {
     padding: 10px;
     display: flex;
-    border-bottom: 1px solid rgb(235, 238, 240);
+    border-bottom: 1px solid #00ABAE;
 }
 
 .home .tweet-list .tweet .user {

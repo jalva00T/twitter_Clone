@@ -6,3 +6,7 @@ from django.http import HttpResponse
 def home(request):
     context={}
     return render(request, 'blog/twitter.html', context=context)
+
+def tweetEdit(request):
+    context={}
+    return render(request, 'blog/tweetEdit.html', context=context)
