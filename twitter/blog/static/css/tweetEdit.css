@@ -147,7 +147,13 @@ HOME
     padding-top: 8px;
 }
 
-.home .ditch {
+/*********************
+
+SPACER
+
+*********************/
+
+.home .spacer {
     height: 15px;
     border-top: 1px solid #00ABAE;
     border-bottom: 1px solid #00ABAE;
@@ -155,13 +161,13 @@ HOME
     border-bottom: 1px solid #00ABAE;
 }
 
-@media screen and (max-width:500px) {
+/* @media screen and (max-width:500px) {
     .home .tweet-list .tweet .user {
         /* 横幅を固定 */
-        width: 60px;
+        /* width: 60px;
         padding: 5px 10px 10px 5px;
     }
     .bottom-area .btn {
         margin-top: 10px;
-    }
-}
+    } 
+} */
