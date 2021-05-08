@@ -55,11 +55,13 @@
                     <img src="{% static 'img/user.png' %}" class="user-default">
                 </div>
                 <div class="input-area">
-                    <form method="post">
+                    <form method="POST">
                         {% csrf_token %}
-                        <input type="hidden" name="csrfmiddlewaretoken">
-                        <input class="input-name" type="text" name="name" placeholder="Your name" maxlength="14">
-                        <textarea class="input-text" name="body" placeholder="What's happening?" maxlength="140"></textarea>
+                        <!-- <input type="hidden" name="csrfmiddlewaretoken"> -->
+                        <input class="input-name" type="text" name="name" placeholder="Your name" maxlength="14"
+                            required="">
+                        <textarea class="input-text" name="body" placeholder="What's happening?"
+                            maxlength="140"></textarea>
                         <div class="bottom-area">
                             <div class="mb-0">
                                 <input class="form-control form-control-sm" name="image" type="file">
@@ -128,6 +130,7 @@
 
             <!-- Test Tweet -->
             <div class="tweet-list">
+                {% for tweet in tweets %}
                 <div class="tweet">
                     <div class="user">
                         <a href="#">
@@ -138,7 +141,7 @@
                     <p class="p-3">There are no posts to be shown.</p>
                     {% else %}
                     <ul class="content">
-                        {% for tweet in tweets %}
+
                         <div class="name">
                             <a href="#" class="">
                                 <span class="nickname">
@@ -151,13 +154,18 @@
 
                             <img src="{% static 'img/menu-icon.png' %}" class="small-menu js-popover"
                                 data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                data-bs-content="<a href='/tweetEdit/'>Edit</a><br><a href='/tweetDelete/'>Delete</a>"
+                                data-bs-content="<a href='/tweetEdit/'>Edit</a><br><a href='/tweetDelete/{{ tweet.id }}'>Delete</a>"
                                 data-bs-html="true" data-bs-original-title="" title="">
                         </div>
                         <p>
                             {{ tweet.body }}
-                            <img src="{{ tweet.image.url }}">
+                            {% if tweet.image is not null%}
+                            <a href="{{tweet.image.url}}" target="_blank">
+                                <img src="{{ tweet.image.url }}">
+                            </a>
+                            {% endif%}
                         </p>
+
 
                         <div class="icon-list">
                             <div class="like js-like" data-tweet-id="28">
@@ -167,12 +175,14 @@
                                 {{ tweet.like_count }}
                             </div>
                         </div>
-                        {% endfor %}
                         {% endif %}
                     </ul>
                 </div>
+                {% endfor %}
+
             </div>
         </div>
+
     </div>
     <!-- {% endblock %} -->
 

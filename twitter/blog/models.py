@@ -19,9 +19,9 @@ class Tweet(models.Model):
     like_count = models.PositiveIntegerField(
         'like_count', default= 0, null=True
     )
-    #created_at = models.DateTimeField(
-    #    'created_datetime', blank=True, auto_now_add=True
-    #)
+    created_at = models.DateTimeField(
+        'created_datetime', blank=True, auto_now_add=True
+    )
     # updated_at = models.DateTimeField(
     #    'Updated Datetime', blank=True, auto_now=True
     #)
