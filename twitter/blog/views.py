@@ -6,7 +6,7 @@ from .forms import PhotoForm
 
 
 def home(request):
-    tweets = Tweet.objects.order_by('created_at').reverse().all()[:5]
+    tweets = Tweet.objects.order_by('created_at').reverse().all()[:8]
     if request.method == 'POST':
         if request.POST.get('name') and request.POST.get('body') and request.POST.get('image'):
             post = Tweet()
@@ -20,7 +20,6 @@ def home(request):
 
 def tweetEdit(request, tweet_id):
     tweets = Tweet.objects.get(id=tweet_id)
-    # context = {}
     return render(request, 'blog/tweetEdit.html')
 
 def tweetDelete(request, tweet_id):

@@ -131,7 +131,7 @@
 
 
 
-            <!-- Test Tweet -->
+            <!-- Tweets -->
             <div class="tweet-list">
                 {% for tweet in tweets %}
                 <div class="tweet">
@@ -172,7 +172,8 @@
 
                         <div class="icon-list">
                             <div class="like js-like" data-tweet-id="28">
-                                <img onclick="Toggle()" id="btn" class="like_btn" src="{% static 'img/heart-icon.png' %}">
+                                <img onclick="Toggle()" id="btn" class="like_btn"
+                                    src="{% static 'img/heart-icon.png' %}">
                             </div>
                             <div class="like-count js-like-count">
                                 {{ tweet.like_count }}
@@ -211,6 +212,14 @@
                 container: 'body'
             })
         })
+    </script>
+
+    <!-- Deactivate Form Resubmission on Reload -->
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
     </script>
 
     <!-- Like JS -->
