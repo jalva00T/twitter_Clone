@@ -57,20 +57,19 @@
                         <img src="/static/img/user.png" class="">
                     </div>
                     <div class="input-area">
-                        <form action="/tweetEdit/" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="csrfmiddlewaretoken"
-                                value="3yFN12fzIxuDaLEuu0ZRmmtcv84ZWzXPIBnphBReafb3s4mMTUGm5faFDmdNwZVl">
-                            <input type="text" name="name" placeholder="Your name" value="Jake Alvarez" maxlength="14"
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="text" name="name" placeholder="Your name" maxlength="14"
                                 required="">
                             <textarea name="body" placeholder="What's happening?" maxlength="140"
-                                required="">Testin again</textarea>
+                                required=""> {{ tweet.body }} </textarea>
 
                             <div class="bottom-area">
                                 <div class="mb-0">
                                     <input class="form-control form-control-sm" name="image" type="file">
                                 </div>
                                 <a href="/" class="btn btn-gray">Cancel</a>
-                                <button class="btn" type="submit">Update</button>
+                                <button class="btn" type="submit" target="blog/twitter.html">Update</button>
                             </div>
                         </form>
                     </div>

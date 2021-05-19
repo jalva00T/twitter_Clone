@@ -25,3 +25,6 @@ class Tweet(models.Model):
     # updated_at = models.DateTimeField(
     #    'Updated Datetime', blank=True, auto_now=True
     #)
+
+
+# class Like(models.Model):

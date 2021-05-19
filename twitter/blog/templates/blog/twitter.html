@@ -11,6 +11,10 @@
 
     {% load static %}
 
+    <!-- Load Cloudinary -->
+
+    {% load cloudinary %}
+
     <!-- Page Icon -->
 
     <link rel="icon" type="image/png" href="{% static 'img/twitter.png' %}">
@@ -57,7 +61,6 @@
                 <div class="input-area">
                     <form method="POST">
                         {% csrf_token %}
-                        <!-- <input type="hidden" name="csrfmiddlewaretoken"> -->
                         <input class="input-name" type="text" name="name" placeholder="Your name" maxlength="14"
                             required="">
                         <textarea class="input-text" name="body" placeholder="What's happening?"
@@ -148,28 +151,28 @@
                                     {{ tweet.name }}
                                 </span>
                                 <span class="datetime">
-                                    {{ tweet.created_datetime }}
+                                    {{ tweet.created_at }}
                                 </span>
                             </a>
 
                             <img src="{% static 'img/menu-icon.png' %}" class="small-menu js-popover"
                                 data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                data-bs-content="<a href='/tweetEdit/'>Edit</a><br><a href='/tweetDelete/{{ tweet.id }}'>Delete</a>"
+                                data-bs-content="<a href='/tweetEdit/{{tweet.id}}'>Edit</a><br><a href='/tweetDelete/{{tweet.id}}'>Delete</a>"
                                 data-bs-html="true" data-bs-original-title="" title="">
                         </div>
                         <p>
                             {{ tweet.body }}
-                            {% if tweet.image is not null%}
+                            <!-- {% if tweet.image is not null%} -->
                             <a href="{{tweet.image.url}}" target="_blank">
                                 <img src="{{ tweet.image.url }}">
                             </a>
-                            {% endif%}
+                            <!-- {% endif%} -->
                         </p>
 
 
                         <div class="icon-list">
                             <div class="like js-like" data-tweet-id="28">
-                                <img src="{% static 'img/heart-icon.png' %}">
+                                <img onclick="Toggle()" id="btn" class="like_btn" src="{% static 'img/heart-icon.png' %}">
                             </div>
                             <div class="like-count js-like-count">
                                 {{ tweet.like_count }}
@@ -212,10 +215,7 @@
 
     <!-- Like JS -->
 
-    <!-- <input type="hidden" name="csrfmiddlewaretoken"
-        value="4KVS22iGWQ8YlWOkCw2LY93IF61RTL6JJNDuiBUloyPoDfwC1qJgH2KbNkaFtb4f">
-
-    <script>
+    <!-- <script>
         const JS_CSRFTOKEN = document.querySelector('[name=csrfmiddlewaretoken]').value;
         const JS_ICON_HEART_GRAY = '/static/img/heart-icon-grey.png';
         const JS_ICON_HEART_BLUE = '/static/img/heart-icon.png';
