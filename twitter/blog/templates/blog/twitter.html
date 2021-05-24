@@ -162,18 +162,20 @@
                         </div>
                         <p>
                             {{ tweet.body }}
-                            <!-- {% if tweet.image is not null%} -->
-                            <a href="{{tweet.image.url}}" target="_blank">
-                                <img src="{{ tweet.image.url }}">
+                            {% if tweet.image is not null%}
+                            <a href="{{ tweet.image.url }}" target="_blank">
+                                <image src="{{ tweet.image.url }}" />
                             </a>
-                            <!-- {% endif%} -->
+                            {% endif%}
                         </p>
 
 
                         <div class="icon-list">
-                            <div class="like js-like" data-tweet-id="28">
-                                <img onclick="Toggle()" id="btn" class="like_btn"
-                                    src="{% static 'img/heart-icon.png' %}">
+                            <div class="like js-like" data-tweet-id="{{ tweet.id }}">
+                                <a href="{% url 'tweetLike' tweet.id %}">
+                                    <img id="btn" class="like_btn" src="{% static 'img/heart-icon.png' %}">
+                                </a>
+
                             </div>
                             <div class="like-count js-like-count">
                                 {{ tweet.like_count }}

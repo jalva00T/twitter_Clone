@@ -16,9 +16,9 @@ class Tweet(models.Model):
     image = CloudinaryField(
         'image', blank=True, null=True
     )
-    like_count = models.PositiveIntegerField(
-        'like_count', default= 0, null=True
-    )
+    #like_count = models.PositiveIntegerField(
+    #    default= 0, null=True
+    #)
     created_at = models.DateTimeField(
         'created_datetime', blank=True, auto_now_add=True
     )
@@ -26,5 +26,3 @@ class Tweet(models.Model):
     #    'Updated Datetime', blank=True, auto_now=True
     #)
 
-
-# class Like(models.Model):
