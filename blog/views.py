@@ -32,7 +32,7 @@ def index(request):
     # page = tweet_paginator.get_page(1)
 
     # Show
-    return render(request, 'blog/twitter.html', {'tweet': tweets,})
+    return render(request, 'twitter.html', {'tweet': tweets,})
 
 
 # ///// EDIT /////
@@ -51,7 +51,7 @@ def tweetEdit(request, tweet_id):
     else:
         # Show editting screen
         form = PhotoForm
-        return render(request, 'blog/tweetEdit.html',
+        return render(request, 'tweetEdit.html',
                       {'tweet': tweets, 'form': form})
 
 
