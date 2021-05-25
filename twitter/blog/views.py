@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.core.paginator import Paginator
 from .models import Tweet
 from .forms import PhotoForm
 from datetime import datetime
@@ -27,9 +28,11 @@ def home(request):
 
     # Get all the posts, limit = 8
     tweets = Tweet.objects.order_by('created_at').reverse().all()[:8]
+    # tweet_paginator = Paginator(tweets, 4)
+    # page = tweet_paginator.get_page(1)
 
     # Show
-    return render(request, 'blog/twitter.html', {'tweets': tweets})
+    return render(request, 'blog/twitter.html', {'tweets': tweets,})
 
 
 # ///// EDIT /////
