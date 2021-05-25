@@ -264,13 +264,13 @@ CLOUDINARY PICS
 
 *********************/
 
-.home .list img {
+/* .home .list img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100px;
-    /*filter: hue-rotate(90deg) saturate(300%);
-    /*filter: invert(100%);*/
-}
+    filter: hue-rotate(90deg) saturate(300%);
+    filter: invert(100%);
+} */

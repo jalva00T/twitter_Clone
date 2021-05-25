@@ -63,9 +63,23 @@
                     <div class="input-area">
                         <form action="/tweetEdit/{{ tweet.id }}" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <input type="text" name="name" placeholder="your name" maxlength="14" required="" value="{{ tweet.name }}">
-                            <textarea name="body" placeholder="What's happening?" maxlength="140"
-                                required="" value="{{ tweet.body }}">{{ tweet.body }}</textarea>
+                            <input type="text" name="name" placeholder="your name" maxlength="14" required=""
+                                value="{{ tweet.name }}">
+                            <textarea name="body" placeholder="What's happening?" maxlength="140" required=""
+                                value="{{ tweet.body }}">{{ tweet.body }}</textarea>
+
+                            {% if tweet.image is not Null %}
+                            <a href="{{ tweet.image.url }}">
+                                <image class="post-image" src="{{ tweet.image.url }}" style="width: 70%;
+                                    height: 300px;
+                                    width: 100%;
+                                    object-fit: scale-down;
+                                    border-radius: 5px;
+                                    margin-bottom: 10px;
+                                    margin-right: 5px;
+                                    border: 1px solid #00ABAE;" />
+                            </a>
+                            {% endif %}
 
                             <div class="bottom-area">
                                 <div class="mb-0">
