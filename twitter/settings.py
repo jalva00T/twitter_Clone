@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'twitter_clone.urls'
+ROOT_URLCONF = 'twitter.urls'
 
 TEMPLATES = [
     {
