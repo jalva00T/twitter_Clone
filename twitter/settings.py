@@ -155,5 +155,5 @@ cloudinary.config(
   api_secret = "rBMT5qt9PoOCO7btSXV0didWF6o" 
 )
 
-APPEND_SLASH=False
+# APPEND_SLASH=False
 
