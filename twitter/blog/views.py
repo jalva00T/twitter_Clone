@@ -42,7 +42,7 @@ def tweetEdit(request, tweet_id):
         form = PhotoForm(request.POST, request.FILES, instance=tweets)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/home/')
+            return HttpResponseRedirect('/home')
         else:
             return HttpResponseRedirect(form.errors.as_json())
     else:
