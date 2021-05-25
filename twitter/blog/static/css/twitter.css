@@ -34,7 +34,8 @@ MAIN
 }
 
 .main .main-header .logo {
-    width: 50px;
+    width: 60px;
+    height: 60px;
     margin-right: 20px;
 }
 
@@ -127,6 +128,12 @@ POSTS
     background-color: #00ABAE;
 }
 
+.home .tweet-post .input-area .bottom-area .btn:hover {
+    background-color: #000000;
+    color: #00ABAE;
+    border: 1px solid #00ABAE;
+}
+
 
 
 /*********************
@@ -172,8 +179,9 @@ TWEET LIST
     justify-content: space-between;
 }
 
-.home .tweet-list .tweet .name a {
+.home .tweet-list .tweet .name a:link {
     color: rgb(21, 32, 43);
+    text-decoration: none;
 }
 
 .home .tweet-list .tweet .name a .nickname {
@@ -188,10 +196,14 @@ TWEET LIST
     font-size: 14px;
 }
 
-.home .tweet-list .tweet .name .small-menu {
+.home .tweet-list .tweet .name .small-menu{
     padding-right: 10px;
     width: 42px;
     height: 32px;
+}
+
+.popover-body a:link {
+    text-decoration: none;
 }
 
 .home .tweet-list .tweet .content {
@@ -231,6 +243,7 @@ TWEET LIST
 .home .tweet-list .tweet .content .icon-list {
     display: flex;
     margin-top: 15px;
+    text-decoration: none;
 }
 
 .home .tweet-list .tweet .content .icon-list .comment img {

@@ -27,7 +27,7 @@ def home(request):
             return HttpResponseRedirect(form.errors.as_json())
 
     # Get all the posts, limit = 8
-    tweets = Tweet.objects.order_by('created_at').reverse().all()[:8]
+    tweets = Tweet.objects.order_by('created_at').reverse().all()[:10]
     # tweet_paginator = Paginator(tweets, 4)
     # page = tweet_paginator.get_page(1)
 
