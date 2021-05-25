@@ -10,7 +10,7 @@ from cloudinary.forms import cl_init_js_callbacks
 # Create your views here.
 
 
-def home(request):
+def index(request):
     # If the method is POST
     if request.method == 'POST':
         form = PhotoForm(request.POST, request.FILES)
