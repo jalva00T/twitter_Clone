@@ -20,7 +20,7 @@ def home(request):
             form.save()
 
             # Redirect to Home
-            return HttpResponseRedirect('/home')
+            return HttpResponseRedirect('/')
 
         else:
             # No, show error
@@ -45,7 +45,7 @@ def tweetEdit(request, tweet_id):
         form = PhotoForm(request.POST, request.FILES, instance=tweets)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/home')
+            return HttpResponseRedirect('/')
         else:
             return HttpResponseRedirect(form.errors.as_json())
     else:
@@ -60,7 +60,7 @@ def tweetEdit(request, tweet_id):
 def tweetDelete(request, tweet_id):
     tweets = Tweet.objects.get(id=tweet_id)
     tweets.delete()
-    return HttpResponseRedirect('/home')
+    return HttpResponseRedirect('/')
 
 
 # ///// LIKES /////
@@ -74,7 +74,7 @@ def tweetLike(request, tweet_id):
   # Save
     print(tweet.like_count)
     tweet.save()
-    return HttpResponseRedirect('/home')
+    return HttpResponseRedirect('/')
 
 def tweetLikeSubtract(request, tweet_id):
   # Get requested tweet
@@ -84,4 +84,4 @@ def tweetLikeSubtract(request, tweet_id):
     tweet.like_count = new_like_count
   # Save
     tweet.save()
-    return HttpResponseRedirect('/home')
+    return HttpResponseRedirect('/')
