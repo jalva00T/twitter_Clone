@@ -206,6 +206,10 @@ TWEET LIST
     text-decoration: none;
 }
 
+.popover-body a {
+    color: #00ABAE;
+}
+
 .home .tweet-list .tweet .content {
     width: calc(100% - 60px);
 }
