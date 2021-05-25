@@ -84,4 +84,4 @@ def tweetLikeSubtract(request, tweet_id):
     tweet.like_count = new_like_count
   # Save
     tweet.save()
-    return JsonResponse({'result': 'successful'})
+    return HttpResponseRedirect('/home')

@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'twitter.urls'
@@ -84,8 +85,13 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd13lbu8m2ge868',
+        'USER': 'jigcgjkfmvumhr',
+        'HOST': 'ec2-54-163-97-228.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'PASSWORD': 'd246889a177505e296fe53cd1919d1aa251b983aa8a7e11de511fd73bebcb399',
+
     }
 }
 
@@ -132,7 +138,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
