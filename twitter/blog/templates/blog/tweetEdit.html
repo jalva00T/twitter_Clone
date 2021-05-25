@@ -11,6 +11,10 @@
 
     {% load static %}
 
+    <!-- Load Cloudinary -->
+
+    {% load cloudinary %}
+
     <!-- Page Icon -->
 
     <link rel="icon" type="image/png" href="{% static 'img/twitter.png' %}">
@@ -68,7 +72,7 @@
                                     <input class="form-control form-control-sm" name="image" type="file">
                                 </div>
                                 <a href="{% url 'home' %}" class="btn btn-gray">Cancel</a>
-                                <button class="btn" type="submit">Update</button>
+                                <button class="btn" type="submit" target="blog/twitter.html">Update</button>
                             </div>
                         </form>
                     </div>

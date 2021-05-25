@@ -132,14 +132,22 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cloudinary Configuration
+
 cloudinary.config( 
   cloud_name = "dlr6ybcfd", 
   api_key = "167928344973144", 
   api_secret = "rBMT5qt9PoOCO7btSXV0didWF6o" 
 )
+
+APPEND_SLASH=False
+

@@ -117,7 +117,7 @@
 
                         <div class="icon-list">
                             <div class="like js-like" data-tweet-id="28">
-                                <img src="{% static 'img/heart-icon.png' %}">
+                                <img src="{% static 'img/heart-icon-blue.png' %}">
                             </div>
                             <div class="like-count js-like-count">
                                 69
@@ -140,9 +140,9 @@
                             <img src="{% static 'img/user.png' %}" class="">
                         </a>
                     </div>
-                    {% if tweets.count == 0 %}
-                    <p class="p-3">There are no posts to be shown.</p>
-                    {% else %}
+                    <!-- {% if tweets.count == 0 %}
+                    <p class="p-3">There are no posts to be shown.</p> -->
+                    <!-- {% else %} -->
                     <ul class="content">
 
                         <div class="name">
@@ -173,7 +173,7 @@
                         <div class="icon-list">
                             <div class="like js-like" data-tweet-id="{{ tweet.id }}">
                                 <a href="{% url 'tweetLike' tweet.id %}">
-                                    <img id="btn" class="like_btn" src="{% static 'img/heart-icon.png' %}">
+                                    <img id="btn" class="like_btn" src="{% static 'img/heart-icon-grey.png' %}">
                                 </a>
 
                             </div>
@@ -181,7 +181,7 @@
                                 {{ tweet.like_count }}
                             </div>
                         </div>
-                        {% endif %}
+                        <!-- {% endif %} -->
                     </ul>
                 </div>
                 {% endfor %}
@@ -226,10 +226,10 @@
 
     <!-- Like JS -->
 
-    <!-- <script>
+    <script>
         const JS_CSRFTOKEN = document.querySelector('[name=csrfmiddlewaretoken]').value;
         const JS_ICON_HEART_GRAY = '/static/img/heart-icon-grey.png';
-        const JS_ICON_HEART_BLUE = '/static/img/heart-icon.png';
+        const JS_ICON_HEART_BLUE = '/static/img/heart-icon-blue.png';
     </script>
 
     <script src="/static/js/like.js?v=1"></script> -->

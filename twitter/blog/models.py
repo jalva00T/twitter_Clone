@@ -17,7 +17,7 @@ class Tweet(models.Model):
         'image', blank=True, null=True
     )
     #like_count = models.PositiveIntegerField(
-    #    default= 0, null=True
+    #   default= 0, null=True
     #)
     created_at = models.DateTimeField(
         'created_datetime', blank=True, auto_now_add=True
