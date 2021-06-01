@@ -108,8 +108,8 @@
 
                             <img src="{% static 'img/menu-icon.png' %}" class="small-menu js-popover"
                                 data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                data-bs-content="<a href='#'>Nice</a><br><a href='#'>Try</a>"
-                                data-bs-html="true" data-bs-original-title="" title="">
+                                data-bs-content="<a href='#'>Nice</a><br><a href='#'>Try</a>" data-bs-html="true"
+                                data-bs-original-title="" title="">
                         </div>
                         <p>
                             Welcome Everyone. Thank You For Joining.
@@ -140,9 +140,9 @@
                             <img src="{% static 'img/user.png' %}" class="">
                         </a>
                     </div>
-                    <!-- {% if tweets.count == 0 %}
-                    <p class="p-3">There are no posts to be shown.</p> -->
-                    <!-- {% else %} -->
+                    {% if tweets.count == 0 %}
+                    <p class="p-3">There are no posts to be shown.</p>
+                    {% else %}
                     <ul class="content">
 
                         <div class="name">
@@ -181,11 +181,10 @@
                                 {{ tweet.like_count }}
                             </div>
                         </div>
-                        <!-- {% endif %} -->
                     </ul>
+                    {% endif %}
                 </div>
                 {% endfor %}
-
             </div>
         </div>
 
