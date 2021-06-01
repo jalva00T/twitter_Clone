@@ -21,6 +21,10 @@ body {
     width: 100%
 } 
 
+input {
+    caret-color: #00ABAE;
+}
+
 /*********************
 
 MAIN
