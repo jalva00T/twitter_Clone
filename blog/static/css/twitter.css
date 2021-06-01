@@ -25,6 +25,10 @@ input {
     caret-color: #00ABAE;
 }
 
+textarea {
+    caret-color: #00ABAE;
+}
+
 /*********************
 
 MAIN
@@ -112,6 +116,7 @@ POSTS
     /* Hide the customizing size area */
     resize: none;
     border-radius: 5px;
+    caret-color: #00ABAE;
 }
 
 .home .tweet-post .input-area textarea:focus {
