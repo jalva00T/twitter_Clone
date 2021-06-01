@@ -32,7 +32,7 @@ def index(request):
     # page = tweet_paginator.get_page(1)
 
     # Show
-    return render(request, 'blog/twitter.html', {'tweet': tweets,})
+    return render(request, 'blog/twitter.html', {'tweets': tweets,})
 
 
 # ///// EDIT /////
