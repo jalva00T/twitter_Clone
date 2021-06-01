@@ -59,7 +59,7 @@
                     <img src="{% static 'img/user.png' %}" class="user-default">
                 </div>
                 <div class="input-area">
-                    <form action="/home" method="POST" enctype="multipart/form-data">
+                    <form action="/" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <input class="input-name" type="text" name="name" placeholder="Your name" maxlength="14"
                             required="">
