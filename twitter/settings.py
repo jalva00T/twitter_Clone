@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd13lbu8m2ge868',
         'USER': 'jigcgjkfmvumhr',
         'HOST': 'ec2-54-163-97-228.compute-1.amazonaws.com',
@@ -155,5 +155,5 @@ cloudinary.config(
   api_secret = "rBMT5qt9PoOCO7btSXV0didWF6o" 
 )
 
-# APPEND_SLASH=False
+APPEND_SLASH=False
 
