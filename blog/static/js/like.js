@@ -8,7 +8,7 @@ $(function () {
         var like_count_obj = $(this).parent().find('.js-like-count');
         var like_count = Number(like_count_obj.html());
         var heart_icon_obj = $(this).find('img');
-        var heart_icon_url = sakura_icon_obj.attr('src');
+        var heart_icon_url = heart_icon_obj.attr('src');
 
         if (heart_icon_url == JS_ICON_HEART_GREY) {
             // It has not been liked
