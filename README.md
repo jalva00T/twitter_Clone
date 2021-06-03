@@ -2,13 +2,13 @@
 
 This is a Twitter Clone Project for TECH I.S. Web Development Program.
 
-For this project there is not a sign/login function, follow function, or user accounts.
+For this project there is not a sign-up/login function or follow function.
 
-A live version can be viewed [here] (https://jake-twitter.herokuapp.com/).
+A live version can be viewed [here](https://jake-twitter.herokuapp.com/).
 
 # Screenshot
 
-![alt text] (https://res.cloudinary.com/dlr6ybcfd/image/upload/v1622678957/Twitter_Shot_ptm8mn.png)
+![Twitter_Shot](https://user-images.githubusercontent.com/76409353/120568137-eb1f9580-c3d8-11eb-8630-123dd2ccf327.png)
 
 # Tech Used
 
