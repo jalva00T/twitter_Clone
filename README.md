@@ -21,7 +21,7 @@ A live version can be viewed [here](https://jake-twitter.herokuapp.com/).
 
 # User Story
 
-* Users can post tweets
-* Users can edit tweets
-* Users can delete tweets
+* Users can post tweets.
+* Users can edit tweets.
+* Users can delete tweets.
 * Users can send a like to a tweet.
