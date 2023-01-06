@@ -8,7 +8,7 @@ class Tweet(models.Model):
         db_table = 'tweet'
 
     name = models.CharField(
-        'name', blank=False, null=False, max_length=30, db_index=True, default='Anonymous'
+        'name', blank=False, null=False, max_length=60, db_index=True, default='Anonymous'
     )
     body = models.CharField(
         'body', blank=True, null=True, max_length=140, db_index=True, default=""
