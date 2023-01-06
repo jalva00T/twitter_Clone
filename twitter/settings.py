@@ -34,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1:8000/','https://0.0.0.3000',]
+CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1:8000/','https://0.0.0.0.3000',]
 
 # Application definition
 
@@ -88,15 +88,10 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd13lbu8m2ge868',
-        'USER': 'jigcgjkfmvumhr',
-        'HOST': 'ec2-54-163-97-228.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'PASSWORD': 'd246889a177505e296fe53cd1919d1aa251b983aa8a7e11de511fd73bebcb399',
-
-    }
+    "default": {         
+        "ENGINE": "django.db.backends.sqlite3",        
+         "NAME": BASE_DIR / "db.sqlite3",    
+          }
 }
 
 

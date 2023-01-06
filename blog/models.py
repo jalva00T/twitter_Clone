@@ -11,7 +11,7 @@ class Tweet(models.Model):
         'name', blank=False, null=False, max_length=30, db_index=True, default='Anonymous'
     )
     body = models.CharField(
-        'body', blank=False, null=False, max_length=140, db_index=True, default=""
+        'body', blank=True, null=True, max_length=140, db_index=True, default=""
     )
     image = CloudinaryField(
         'image', blank=True, null=True
