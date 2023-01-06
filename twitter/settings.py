@@ -31,14 +31,17 @@ SECRET_KEY = 'django-insecure-8vp!tug^t=wy-u__52h$c8p9i2$_sy$wcxj29jl=*h*_la4q5a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com','localhost']
-
+ALLOWED_HOSTS = ['*']
+X_FRAME_OPTIONS = '*'
+CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1:8000/','https://0.0.0.3000',]
 
 # Application definition
 
 INSTALLED_APPS = [
     'blog',
     'cloudinary',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
